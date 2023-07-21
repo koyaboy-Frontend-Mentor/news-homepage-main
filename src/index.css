@@ -1,13 +1,238 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: Inter-Regular;
+  src: url('fonts/static/Inter-Regular.ttf');
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Inter-ExtraBold;
+  src: url('fonts/static/Inter-ExtraBold.ttf');
 }
+
+@font-face {
+  font-family: Inter-Bold;
+  src: url('fonts/static/Inter-Bold.ttf');
+}
+
+
+/* BASE STYLES*/
+body {
+  margin: 0;
+  font-family: Inter-Regular;
+}
+
+.App {
+  max-width: 1440px;
+  width: 80%;
+  min-height: 100%;
+  margin: 5em auto;
+}
+
+/* 
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+} */
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 15px;
+  /* padding: 0;
+  margin: 0; */
+}
+
+/**/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.5em;
+}
+
+main.grid {
+  /* grid-auto-rows: 1fr; */
+  row-gap: 4em;
+}
+
+.img-container {
+  width: 100%;
+}
+
+header {
+  padding: 1.5em 0;
+}
+
+header img {
+  grid-column: span 5;
+}
+
+header ul {
+  grid-column: span 7;
+  justify-self: flex-end;
+}
+
+header ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 2.5em;
+}
+
+
+header ul a {
+  color: hsl(236, 13%, 42%);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header ul a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+article.featured {
+  grid-column: span 8;
+  /* margin-bottom: 2em; */
+  /* background-color: red; */
+
+}
+
+article.featured img {
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+
+article.featured div {
+  align-items: flex-start;
+
+  /* background-color: red; */
+}
+
+article.featured div h1 {
+  font-family: Inter-ExtraBold;
+  font-size: 3.5rem;
+  grid-column: span 5;
+}
+
+article.featured div div.title-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: yellow; */
+
+  grid-row: 1fr;
+}
+
+article.featured div div.title-text p {
+  line-height: 1.5em;
+  color: hsl(236, 13%, 42%);
+}
+
+article.featured div div.title-text button {
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding: 1em 2em;
+  letter-spacing: 0.2em;
+  border-style: none;
+
+  margin-top: 2.5em;
+}
+
+article.featured div div.title-text button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 5%);
+}
+
+main aside {
+  grid-column: 9/span 4;
+  /* grid-row: span 1; */
+  padding: 0 1.5em;
+  padding-top: 2em;
+  background-color: hsl(240, 100%, 5%);
+}
+
+main aside h2 {
+  font-size: 2rem;
+  color: hsl(35, 77%, 62%);
+  margin-bottom: 1em;
+}
+
+main aside div.text {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+main aside div:nth-child(4) {
+  border-bottom: 0;
+}
+
+main aside div.text h3 {
+  color: hsl(36, 100%, 99%);
+}
+
+main aside p {
+  padding-bottom: 1.3em;
+  color: hsl(236, 13%, 42%);
+}
+
+aside div.text h3:hover {
+  cursor: pointer;
+  color: hsl(35, 77%, 62%);
+}
+
+div h1.title {
+  grid-column: span 6;
+}
+
+div.title-text {
+  grid-column: 7/span 6;
+}
+
+article.unfeatured {
+  grid-column: span 4;
+  display: flex;
+  gap: 1em;
+}
+
+article.unfeatured img {
+  align-self: flex-start;
+  height: 120px;
+}
+
+article.unfeatured div.text {
+  /* height: 200px; */
+  /* background-color: red; */
+  max-width: 60%;
+}
+
+article.unfeatured div.text h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: hsl(233, 8%, 79%);
+
+}
+
+article.unfeatured div.text h4 {
+  font-family: Inter-Bold;
+}
+
+article.unfeatured div.text h4:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
+}
+
+article.unfeatured div.text p {
+  color: hsl(236, 13%, 42%);
+  margin-top: -0.6em;
+}
+
+
+
+
+
+
+/*Responsive*/
