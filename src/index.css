@@ -37,7 +37,8 @@ h3 {
 } */
 
 h1,
-h2 {
+h2,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -94,6 +95,25 @@ header ul a {
 header ul a:hover {
   color: hsl(5, 85%, 63%);
 }
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: span 7;
+  justify-self: flex-end;
+  background: transparent;
+  border: none;
+  display: none;
+}
+
+.nav-close-container,
+.nav-close-btn {
+  display: none;
+}
+
+
+
 
 article.featured {
   grid-column: span 8;
@@ -213,6 +233,7 @@ article.unfeatured div.text h2 {
   font-weight: 600;
   font-size: 1.6rem;
   color: hsl(233, 8%, 79%);
+  margin-bottom: -0.5em;
 
 }
 
@@ -232,7 +253,102 @@ article.unfeatured div.text p {
 
 
 
-
-
-
 /*Responsive*/
+
+@media screen and (max-width: 1000px) {
+
+  /* .grid {
+    grid-template-columns: 1fr;
+  } */
+
+  .App {
+    width: 95%;
+  }
+
+
+  article.featured,
+  article.featured div,
+  article.featured div h1.title,
+  main aside,
+  article.unfeatured {
+    grid-column: span 12;
+  }
+
+  article.featured div div.title-text button {
+    margin-top: 0.5em;
+  }
+
+
+  header {
+    align-items: center;
+  }
+
+  .hamburgerMenu {
+    display: block;
+  }
+
+  header ul {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    position: fixed;
+    overflow-x: hidden;
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    background-color: hsl(36, 100%, 99%);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    opacity: 1;
+    text-align: left;
+  }
+
+  header ul li {
+    margin-left: 1.5em;
+  }
+
+  header ul li a {
+    color: black;
+  }
+
+
+  .nav-close-container {
+    /* background-color: yellow; */
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .nav-close-btn {
+    display: block;
+    border: none;
+    background: none;
+  }
+
+  .responsive-nav {
+    width: 55%;
+    height: 100%;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+}

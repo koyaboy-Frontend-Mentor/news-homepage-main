@@ -1,16 +1,35 @@
+import { useState, useRef } from 'react';
 import './index.css';
 function App() {
+
+  const [isActive, setIsActive] = useState(false);
+  const navRef = useRef()
+
+  const toggleNavbar = () => {
+    setIsActive(isActive => !isActive)
+    navRef.current.classList.toggle("responsive-nav")
+  }
   return (
     <div className="App">
       <header className='grid'>
         <img src="assets/images/logo.svg" alt="" />
-        <ul>
+
+        <button className='hamburgerMenu' onClick={toggleNavbar}>
+          <img src="./assets/images/icon-menu.svg" alt="" />
+        </button>
+
+
+
+        <ul ref={navRef}>
+          <div className='nav-close-container'><li><button className='nav-close-btn' onClick={toggleNavbar}><img src="assets/images/icon-menu-close.svg" alt="" /></button></li></div>
           <li> <a href="/">Home</a> </li>
           <li> <a href="/">New</a> </li>
           <li> <a href="/">Popular</a> </li>
           <li> <a href="/">Trending</a> </li>
           <li> <a href="/">Categories</a> </li>
         </ul>
+
+        <div className={isActive ? "overlay active" : "overlay"} onClick={toggleNavbar}></div>
       </header>
 
       <main className='grid'>
