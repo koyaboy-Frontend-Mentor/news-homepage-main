@@ -12,16 +12,16 @@ function App() {
   return (
     <div className="App">
       <header className='grid'>
-        <img src="assets/images/logo.svg" alt="" />
+        <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/logo.svg" alt="" />
 
         <button className='hamburgerMenu' onClick={toggleNavbar}>
-          <img src="./assets/images/icon-menu.svg" alt="" />
+          <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/icon-menu.svg" alt="" />
         </button>
 
 
 
         <ul ref={navRef}>
-          <div className='nav-close-container'><li><button className='nav-close-btn' onClick={toggleNavbar}><img src="assets/images/icon-menu-close.svg" alt="" /></button></li></div>
+          <div className='nav-close-container'><li><button className='nav-close-btn' onClick={toggleNavbar}><img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/icon-menu-close.svg" alt="" /></button></li></div>
           <li> <a href="/">Home</a> </li>
           <li> <a href="/">New</a> </li>
           <li> <a href="/">Popular</a> </li>
@@ -35,7 +35,7 @@ function App() {
       <main className='grid'>
 
         <article className="featured">
-          <img src="assets/images/image-web-3-desktop.jpg" alt="" />
+          <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/image-web-3-desktop.jpg" alt="" />
 
           <div className='grid'>
             <h1 className='title'>The Bright Future of Web 3.0?</h1>
@@ -68,8 +68,9 @@ function App() {
 
         </aside>
 
+
         <article className='unfeatured  one'>
-          <img src="assets/images/image-retro-pcs.jpg" alt="" />
+          <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/image-retro-pcs.jpg" alt="" />
           <div className='text'>
             <h2>01</h2>
             <h4>Reviving Retro PCs</h4>
@@ -80,7 +81,7 @@ function App() {
 
 
         <article className='unfeatured two'>
-          <img src="assets/images/image-top-laptops.jpg" alt="" />
+          <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/image-top-laptops.jpg" alt="" />
           <div className='text'>
             <h2>02</h2>
             <h4>Top 10 Laptops of 2022</h4>
@@ -91,7 +92,7 @@ function App() {
 
         <article className='unfeatured three'>
 
-          <img src="assets/images/image-gaming-growth.jpg" alt="gaming image" />
+          <img src="https://koyaboy-frontend-mentor.github.io/news-homepage-main/assets/images/image-gaming-growth.jpg" alt="gaming image" />
 
           <div className='text'>
             <h2>03</h2>

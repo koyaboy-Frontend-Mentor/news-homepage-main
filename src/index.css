@@ -38,6 +38,7 @@ h3 {
 
 h1,
 h2,
+h3,
 ul {
   margin: 0;
   padding: 0;
@@ -58,7 +59,6 @@ p {
 }
 
 main.grid {
-  /* grid-auto-rows: 1fr; */
   row-gap: 4em;
 }
 
@@ -125,27 +125,28 @@ article.featured {
 article.featured img {
   width: 100%;
   margin-bottom: 1.2em;
+  height: 255px;
+  /* object-fit: cover; */
 }
 
 article.featured div {
   align-items: flex-start;
-
   /* background-color: red; */
+
 }
 
 article.featured div h1 {
   font-family: Inter-ExtraBold;
   font-size: 3.5rem;
   grid-column: span 5;
+  line-height: 1em;
 }
 
 article.featured div div.title-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: yellow; */
-
-  grid-row: 1fr;
+  word-spacing: 0.2rem;
 }
 
 article.featured div div.title-text p {
@@ -161,6 +162,7 @@ article.featured div div.title-text button {
   border-style: none;
 
   margin-top: 2.5em;
+  font-weight: 600;
 }
 
 article.featured div div.title-text button:hover {
@@ -174,6 +176,8 @@ main aside {
   padding: 0 1.5em;
   padding-top: 2em;
   background-color: hsl(240, 100%, 5%);
+  /* 
+  width: 70%; */
 }
 
 main aside h2 {
@@ -184,6 +188,7 @@ main aside h2 {
 
 main aside div.text {
   border-bottom: 1px solid hsl(236, 13%, 42%);
+  margin-top: 1.5em;
 }
 
 main aside div:nth-child(4) {
@@ -192,11 +197,14 @@ main aside div:nth-child(4) {
 
 main aside div.text h3 {
   color: hsl(36, 100%, 99%);
+
 }
 
 main aside p {
-  padding-bottom: 1.3em;
+  margin-bottom: 2em;
   color: hsl(236, 13%, 42%);
+  margin-top: 0.5em;
+  line-height: 1.5em;
 }
 
 aside div.text h3:hover {
@@ -220,7 +228,7 @@ article.unfeatured {
 
 article.unfeatured img {
   align-self: flex-start;
-  height: 120px;
+  height: 150px;
 }
 
 article.unfeatured div.text {
@@ -231,7 +239,7 @@ article.unfeatured div.text {
 
 article.unfeatured div.text h2 {
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: hsl(233, 8%, 79%);
   margin-bottom: -0.5em;
 
@@ -239,6 +247,7 @@ article.unfeatured div.text h2 {
 
 article.unfeatured div.text h4 {
   font-family: Inter-Bold;
+  font-size: 1.2rem;
 }
 
 article.unfeatured div.text h4:hover {
@@ -249,6 +258,7 @@ article.unfeatured div.text h4:hover {
 article.unfeatured div.text p {
   color: hsl(236, 13%, 42%);
   margin-top: -0.6em;
+  line-height: 1.5rem;
 }
 
 
