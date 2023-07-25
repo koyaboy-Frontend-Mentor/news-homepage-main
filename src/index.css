@@ -284,6 +284,10 @@ article.unfeatured div.text p {
     grid-column: span 12;
   }
 
+  article.featured img {
+    object-fit: cover;
+  }
+
   article.featured div div.title-text button {
     margin-top: 0.5em;
   }
